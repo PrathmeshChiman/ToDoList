@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
-import 'bootstrap-css-only/css/bootstrap.min.css'; 
+// import 'bootstrap-css-only/css/bootstrap.min.css'; 
 
 let ID = 0;
 
@@ -76,7 +76,7 @@ function TodoItem(props){
             setTodos(newTodo);
             setValue("");
             // console.log("edit",id,todos,newTodo);
-          }}} className="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i className="fa fa-edit"></i></button>
+          }}} className="btn btn-success btn-sm rounded-0 editbtn" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i className="fa fa-edit"></i></button>
           <button onClick={function(){
             if(window.confirm("Are you sure about deleting the item")){
               const newTodo = todos.filter((item) => {
@@ -85,7 +85,7 @@ function TodoItem(props){
               setTodos(newTodo);
               // console.log("delete",id,todos,newTodo);
             }       
-          }} className="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i className="fa fa-trash"></i></button>
+          }} className="btn btn-danger btn-sm rounded-0 deletebtn" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i className="fa fa-trash"></i></button>
         </div>     
       </div>
     </>
@@ -123,7 +123,7 @@ function ToDoApp(){
             setTodos( [...todos,{ task: value,id: ID++}])
             setValue("");
           }
-        }} className="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add">Add</button>        
+        }} className="btn btn-primary btn-sm rounded-0 addbtn" type="button" data-toggle="tooltip" data-placement="top" title="Add">Add</button>        
         <div className="itemList">
           <TodoList todos={todos} setTodos={setTodos} value={value} setValue={setValue}/>
        </div>
