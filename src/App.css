@@ -1,0 +1,30 @@
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items{
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemList{
+  width: 180px;
+}
+
+input{
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+}
+
+input:focus{
+  outline: none;
+}
+
+.backBtn{
+  background-color: red;
+  color: white;
+}
