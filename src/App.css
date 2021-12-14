@@ -25,6 +25,8 @@ input:focus{
 }
 
 .backBtn{
-  background-color: red;
-  color: white;
+  background-color: white;
+  border: none;
+  color: red;
+  font-weight: bold;
 }
