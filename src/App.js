@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
 
 let ID = 0;
 
@@ -48,7 +50,7 @@ function TodoItem(props){
         <div>
           <button className="backBtn" onClick={function(){
             setFlag(false);
-            }}  title="Edit">X</button>
+            }}  title="Cancel">X</button>
         </div>
         
       </div>
@@ -58,7 +60,9 @@ function TodoItem(props){
     return(
       <>
       <div className="items">
+      <div>
         {task}
+      </div>
         <div>
           <button onClick={function(){
             setFlag(true);
