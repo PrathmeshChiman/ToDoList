@@ -30,3 +30,20 @@ input:focus{
   color: red;
   font-weight: bold;
 }
+
+.addbtn{
+  background-color: #1283a8;
+  border-radius: 3px;
+}
+
+.editbtn{
+  background-color: rgb(4, 145, 4);
+  border-radius: 3px;
+  border: none;
+}
+
+.deletebtn{
+  background-color: rgb(216, 19, 19);
+  border-radius: 3px;
+  border: none;
+}
