@@ -66,17 +66,7 @@ function TodoItem(props){
         <div>
           <button onClick={function(){
             setFlag(true);
-            if(value !==""){
-              const newTodo = todos.map((item) => {
-              if(item.id === id){
-                return { task: value,id:id}
-              }
-              return item;  
-            })
-            setTodos(newTodo);
-            setValue("");
-            // console.log("edit",id,todos,newTodo);
-          }}} className="btn btn-success btn-sm rounded-0 editbtn" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i className="fa fa-edit"></i></button>
+            }} className="btn btn-success btn-sm rounded-0 editbtn" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i className="fa fa-edit"></i></button>
           <button onClick={function(){
             if(window.confirm("Are you sure about deleting the item")){
               const newTodo = todos.filter((item) => {
@@ -139,7 +129,3 @@ function App() {
 }
 
 export default App;
-
-// To Develop a To-Do-List.
-// Feature: Assign dates to task,add and check task on day basis and add future task by selecting different date.
-// Role: Developer | Tech Stack: React JS.
